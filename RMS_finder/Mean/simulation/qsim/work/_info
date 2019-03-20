@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\nailt\Desktop\my_git\314-Project\RMS_finder\Mean\simulation\qsim
+vMean
+Z1 !s100 CTAcL>_Ggk6l]cO5>z>U02
+Z2 I_X=QlLY?5jfcmEhQXfl321
+Z3 VL<WNclFhA<b4;3<cXSCC90
+Z4 dC:\Users\nailt\Desktop\my_git\314-Project\RMS_finder\Mean\simulation\qsim
+Z5 w1528024318
+Z6 8Mean.vo
+Z7 FMean.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Mean.vo|
+Z10 o-work work -O0
+Z11 n@mean
+!i10b 1
+!s85 0
+Z12 !s108 1528024320.455000
+Z13 !s107 Mean.vo|
+!s101 -O0
+vMean_vlg_check_tst
+!i10b 1
+Z14 !s100 DhjLDLzo7@6CzIBD`L49o3
+Z15 I>XC5FF?f?[KCTdOdNKh>43
+Z16 VPXSE87Jcn7z[3m7Oob=R=2
+R4
+Z17 w1528024316
+Z18 8Waveform8.vwf.vt
+Z19 FWaveform8.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z20 !s108 1528024321.129000
+Z21 !s107 Waveform8.vwf.vt|
+Z22 !s90 -work|work|Waveform8.vwf.vt|
+!s101 -O0
+R10
+Z23 n@mean_vlg_check_tst
+vMean_vlg_sample_tst
+!i10b 1
+Z24 !s100 ]6BdTC>:33CTM9A>?95dc0
+Z25 IGOo_6F[NKn06L6DYC`YDE3
+Z26 VK7i6IlV8CfQ^cIiNj`6AL2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@mean_vlg_sample_tst
+vMean_vlg_vec_tst
+!i10b 1
+!s100 D0bkD]C36maMO>lEl5Hbg2
+IWA0Q6faSI6S:07=3k=R2Z1
+Z28 V_K9e;=_D8e[CF^[gkS0Y=2
+R4
+R17
+R18
+R19
+Z29 L0 713
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@mean_vlg_vec_tst

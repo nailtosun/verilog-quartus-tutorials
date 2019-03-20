@@ -1,0 +1,1020 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "06/03/2018 13:21:19"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Mean
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Mean_vlg_sample_tst(
+	clk,
+	freq,
+	serial_in,
+	sampler_tx
+);
+input  clk;
+input [31:0] freq;
+input [11:0] serial_in;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or freq or serial_in)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Mean_vlg_check_tst (
+	average,
+	sampler_rx
+);
+input [31:0] average;
+input sampler_rx;
+
+reg [31:0] average_expected;
+
+reg [31:0] average_prev;
+
+reg [31:0] average_expected_prev;
+
+reg [31:0] last_average_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	average_prev = average;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	average_expected_prev = average_expected;
+end
+
+
+// expected average[ 31 ]
+initial
+begin
+	average_expected[31] = 1'bX;
+end 
+// expected average[ 30 ]
+initial
+begin
+	average_expected[30] = 1'bX;
+end 
+// expected average[ 29 ]
+initial
+begin
+	average_expected[29] = 1'bX;
+end 
+// expected average[ 28 ]
+initial
+begin
+	average_expected[28] = 1'bX;
+end 
+// expected average[ 27 ]
+initial
+begin
+	average_expected[27] = 1'bX;
+end 
+// expected average[ 26 ]
+initial
+begin
+	average_expected[26] = 1'bX;
+end 
+// expected average[ 25 ]
+initial
+begin
+	average_expected[25] = 1'bX;
+end 
+// expected average[ 24 ]
+initial
+begin
+	average_expected[24] = 1'bX;
+end 
+// expected average[ 23 ]
+initial
+begin
+	average_expected[23] = 1'bX;
+end 
+// expected average[ 22 ]
+initial
+begin
+	average_expected[22] = 1'bX;
+end 
+// expected average[ 21 ]
+initial
+begin
+	average_expected[21] = 1'bX;
+end 
+// expected average[ 20 ]
+initial
+begin
+	average_expected[20] = 1'bX;
+end 
+// expected average[ 19 ]
+initial
+begin
+	average_expected[19] = 1'bX;
+end 
+// expected average[ 18 ]
+initial
+begin
+	average_expected[18] = 1'bX;
+end 
+// expected average[ 17 ]
+initial
+begin
+	average_expected[17] = 1'bX;
+end 
+// expected average[ 16 ]
+initial
+begin
+	average_expected[16] = 1'bX;
+end 
+// expected average[ 15 ]
+initial
+begin
+	average_expected[15] = 1'bX;
+end 
+// expected average[ 14 ]
+initial
+begin
+	average_expected[14] = 1'bX;
+end 
+// expected average[ 13 ]
+initial
+begin
+	average_expected[13] = 1'bX;
+end 
+// expected average[ 12 ]
+initial
+begin
+	average_expected[12] = 1'bX;
+end 
+// expected average[ 11 ]
+initial
+begin
+	average_expected[11] = 1'bX;
+end 
+// expected average[ 10 ]
+initial
+begin
+	average_expected[10] = 1'bX;
+end 
+// expected average[ 9 ]
+initial
+begin
+	average_expected[9] = 1'bX;
+end 
+// expected average[ 8 ]
+initial
+begin
+	average_expected[8] = 1'bX;
+end 
+// expected average[ 7 ]
+initial
+begin
+	average_expected[7] = 1'bX;
+end 
+// expected average[ 6 ]
+initial
+begin
+	average_expected[6] = 1'bX;
+end 
+// expected average[ 5 ]
+initial
+begin
+	average_expected[5] = 1'bX;
+end 
+// expected average[ 4 ]
+initial
+begin
+	average_expected[4] = 1'bX;
+end 
+// expected average[ 3 ]
+initial
+begin
+	average_expected[3] = 1'bX;
+end 
+// expected average[ 2 ]
+initial
+begin
+	average_expected[2] = 1'bX;
+end 
+// expected average[ 1 ]
+initial
+begin
+	average_expected[1] = 1'bX;
+end 
+// expected average[ 0 ]
+initial
+begin
+	average_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(average_expected or average)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected average = %b | ",average_expected_prev);
+	$display("| real average = %b | ",average_prev);
+`endif
+	if (
+		( average_expected_prev[0] !== 1'bx ) && ( average_prev[0] !== average_expected_prev[0] )
+		&& ((average_expected_prev[0] !== last_average_exp[0]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[0] = average_expected_prev[0];
+	end
+	if (
+		( average_expected_prev[1] !== 1'bx ) && ( average_prev[1] !== average_expected_prev[1] )
+		&& ((average_expected_prev[1] !== last_average_exp[1]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[1] = average_expected_prev[1];
+	end
+	if (
+		( average_expected_prev[2] !== 1'bx ) && ( average_prev[2] !== average_expected_prev[2] )
+		&& ((average_expected_prev[2] !== last_average_exp[2]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[2] = average_expected_prev[2];
+	end
+	if (
+		( average_expected_prev[3] !== 1'bx ) && ( average_prev[3] !== average_expected_prev[3] )
+		&& ((average_expected_prev[3] !== last_average_exp[3]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[3] = average_expected_prev[3];
+	end
+	if (
+		( average_expected_prev[4] !== 1'bx ) && ( average_prev[4] !== average_expected_prev[4] )
+		&& ((average_expected_prev[4] !== last_average_exp[4]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[4] = average_expected_prev[4];
+	end
+	if (
+		( average_expected_prev[5] !== 1'bx ) && ( average_prev[5] !== average_expected_prev[5] )
+		&& ((average_expected_prev[5] !== last_average_exp[5]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[5] = average_expected_prev[5];
+	end
+	if (
+		( average_expected_prev[6] !== 1'bx ) && ( average_prev[6] !== average_expected_prev[6] )
+		&& ((average_expected_prev[6] !== last_average_exp[6]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[6] = average_expected_prev[6];
+	end
+	if (
+		( average_expected_prev[7] !== 1'bx ) && ( average_prev[7] !== average_expected_prev[7] )
+		&& ((average_expected_prev[7] !== last_average_exp[7]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[7] = average_expected_prev[7];
+	end
+	if (
+		( average_expected_prev[8] !== 1'bx ) && ( average_prev[8] !== average_expected_prev[8] )
+		&& ((average_expected_prev[8] !== last_average_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[8] = average_expected_prev[8];
+	end
+	if (
+		( average_expected_prev[9] !== 1'bx ) && ( average_prev[9] !== average_expected_prev[9] )
+		&& ((average_expected_prev[9] !== last_average_exp[9]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[9] = average_expected_prev[9];
+	end
+	if (
+		( average_expected_prev[10] !== 1'bx ) && ( average_prev[10] !== average_expected_prev[10] )
+		&& ((average_expected_prev[10] !== last_average_exp[10]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[10] = average_expected_prev[10];
+	end
+	if (
+		( average_expected_prev[11] !== 1'bx ) && ( average_prev[11] !== average_expected_prev[11] )
+		&& ((average_expected_prev[11] !== last_average_exp[11]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[11] = average_expected_prev[11];
+	end
+	if (
+		( average_expected_prev[12] !== 1'bx ) && ( average_prev[12] !== average_expected_prev[12] )
+		&& ((average_expected_prev[12] !== last_average_exp[12]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[12] = average_expected_prev[12];
+	end
+	if (
+		( average_expected_prev[13] !== 1'bx ) && ( average_prev[13] !== average_expected_prev[13] )
+		&& ((average_expected_prev[13] !== last_average_exp[13]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[13] = average_expected_prev[13];
+	end
+	if (
+		( average_expected_prev[14] !== 1'bx ) && ( average_prev[14] !== average_expected_prev[14] )
+		&& ((average_expected_prev[14] !== last_average_exp[14]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[14] = average_expected_prev[14];
+	end
+	if (
+		( average_expected_prev[15] !== 1'bx ) && ( average_prev[15] !== average_expected_prev[15] )
+		&& ((average_expected_prev[15] !== last_average_exp[15]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[15] = average_expected_prev[15];
+	end
+	if (
+		( average_expected_prev[16] !== 1'bx ) && ( average_prev[16] !== average_expected_prev[16] )
+		&& ((average_expected_prev[16] !== last_average_exp[16]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[16] = average_expected_prev[16];
+	end
+	if (
+		( average_expected_prev[17] !== 1'bx ) && ( average_prev[17] !== average_expected_prev[17] )
+		&& ((average_expected_prev[17] !== last_average_exp[17]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[17] = average_expected_prev[17];
+	end
+	if (
+		( average_expected_prev[18] !== 1'bx ) && ( average_prev[18] !== average_expected_prev[18] )
+		&& ((average_expected_prev[18] !== last_average_exp[18]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[18] = average_expected_prev[18];
+	end
+	if (
+		( average_expected_prev[19] !== 1'bx ) && ( average_prev[19] !== average_expected_prev[19] )
+		&& ((average_expected_prev[19] !== last_average_exp[19]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[19] = average_expected_prev[19];
+	end
+	if (
+		( average_expected_prev[20] !== 1'bx ) && ( average_prev[20] !== average_expected_prev[20] )
+		&& ((average_expected_prev[20] !== last_average_exp[20]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[20] = average_expected_prev[20];
+	end
+	if (
+		( average_expected_prev[21] !== 1'bx ) && ( average_prev[21] !== average_expected_prev[21] )
+		&& ((average_expected_prev[21] !== last_average_exp[21]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[21] = average_expected_prev[21];
+	end
+	if (
+		( average_expected_prev[22] !== 1'bx ) && ( average_prev[22] !== average_expected_prev[22] )
+		&& ((average_expected_prev[22] !== last_average_exp[22]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[22] = average_expected_prev[22];
+	end
+	if (
+		( average_expected_prev[23] !== 1'bx ) && ( average_prev[23] !== average_expected_prev[23] )
+		&& ((average_expected_prev[23] !== last_average_exp[23]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[23] = average_expected_prev[23];
+	end
+	if (
+		( average_expected_prev[24] !== 1'bx ) && ( average_prev[24] !== average_expected_prev[24] )
+		&& ((average_expected_prev[24] !== last_average_exp[24]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[24] = average_expected_prev[24];
+	end
+	if (
+		( average_expected_prev[25] !== 1'bx ) && ( average_prev[25] !== average_expected_prev[25] )
+		&& ((average_expected_prev[25] !== last_average_exp[25]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[25] = average_expected_prev[25];
+	end
+	if (
+		( average_expected_prev[26] !== 1'bx ) && ( average_prev[26] !== average_expected_prev[26] )
+		&& ((average_expected_prev[26] !== last_average_exp[26]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[26] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[26] = average_expected_prev[26];
+	end
+	if (
+		( average_expected_prev[27] !== 1'bx ) && ( average_prev[27] !== average_expected_prev[27] )
+		&& ((average_expected_prev[27] !== last_average_exp[27]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[27] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[27] = average_expected_prev[27];
+	end
+	if (
+		( average_expected_prev[28] !== 1'bx ) && ( average_prev[28] !== average_expected_prev[28] )
+		&& ((average_expected_prev[28] !== last_average_exp[28]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[28] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[28] = average_expected_prev[28];
+	end
+	if (
+		( average_expected_prev[29] !== 1'bx ) && ( average_prev[29] !== average_expected_prev[29] )
+		&& ((average_expected_prev[29] !== last_average_exp[29]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[29] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[29] = average_expected_prev[29];
+	end
+	if (
+		( average_expected_prev[30] !== 1'bx ) && ( average_prev[30] !== average_expected_prev[30] )
+		&& ((average_expected_prev[30] !== last_average_exp[30]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[30] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[30] = average_expected_prev[30];
+	end
+	if (
+		( average_expected_prev[31] !== 1'bx ) && ( average_prev[31] !== average_expected_prev[31] )
+		&& ((average_expected_prev[31] !== last_average_exp[31]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port average[31] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", average_expected_prev);
+		$display ("     Real value = %b", average_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_average_exp[31] = average_expected_prev[31];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Mean_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [31:0] freq;
+reg [11:0] serial_in;
+// wires                                               
+wire [31:0] average;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Mean i1 (
+// port map - connection between master ports and signals/registers   
+	.average(average),
+	.clk(clk),
+	.freq(freq),
+	.serial_in(serial_in)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #500 1'b1;
+	#500;
+end 
+// freq[ 31 ]
+initial
+begin
+	freq[31] = 1'b0;
+end 
+// freq[ 30 ]
+initial
+begin
+	freq[30] = 1'b0;
+end 
+// freq[ 29 ]
+initial
+begin
+	freq[29] = 1'b0;
+end 
+// freq[ 28 ]
+initial
+begin
+	freq[28] = 1'b0;
+end 
+// freq[ 27 ]
+initial
+begin
+	freq[27] = 1'b0;
+end 
+// freq[ 26 ]
+initial
+begin
+	freq[26] = 1'b0;
+end 
+// freq[ 25 ]
+initial
+begin
+	freq[25] = 1'b0;
+end 
+// freq[ 24 ]
+initial
+begin
+	freq[24] = 1'b0;
+end 
+// freq[ 23 ]
+initial
+begin
+	freq[23] = 1'b0;
+end 
+// freq[ 22 ]
+initial
+begin
+	freq[22] = 1'b0;
+end 
+// freq[ 21 ]
+initial
+begin
+	freq[21] = 1'b0;
+end 
+// freq[ 20 ]
+initial
+begin
+	freq[20] = 1'b0;
+end 
+// freq[ 19 ]
+initial
+begin
+	freq[19] = 1'b0;
+end 
+// freq[ 18 ]
+initial
+begin
+	freq[18] = 1'b0;
+end 
+// freq[ 17 ]
+initial
+begin
+	freq[17] = 1'b0;
+end 
+// freq[ 16 ]
+initial
+begin
+	freq[16] = 1'b0;
+end 
+// freq[ 15 ]
+initial
+begin
+	freq[15] = 1'b0;
+end 
+// freq[ 14 ]
+initial
+begin
+	freq[14] = 1'b0;
+end 
+// freq[ 13 ]
+initial
+begin
+	freq[13] = 1'b0;
+end 
+// freq[ 12 ]
+initial
+begin
+	freq[12] = 1'b0;
+end 
+// freq[ 11 ]
+initial
+begin
+	freq[11] = 1'b0;
+end 
+// freq[ 10 ]
+initial
+begin
+	freq[10] = 1'b0;
+end 
+// freq[ 9 ]
+initial
+begin
+	freq[9] = 1'b0;
+end 
+// freq[ 8 ]
+initial
+begin
+	freq[8] = 1'b0;
+end 
+// freq[ 7 ]
+initial
+begin
+	freq[7] = 1'b0;
+end 
+// freq[ 6 ]
+initial
+begin
+	freq[6] = 1'b0;
+end 
+// freq[ 5 ]
+initial
+begin
+	freq[5] = 1'b0;
+end 
+// freq[ 4 ]
+initial
+begin
+	freq[4] = 1'b0;
+end 
+// freq[ 3 ]
+initial
+begin
+	freq[3] = 1'b0;
+end 
+// freq[ 2 ]
+initial
+begin
+	freq[2] = 1'b0;
+end 
+// freq[ 1 ]
+initial
+begin
+	freq[1] = 1'b0;
+end 
+// freq[ 0 ]
+initial
+begin
+	freq[0] = 1'b0;
+end 
+// serial_in[ 11 ]
+initial
+begin
+	serial_in[11] = 1'b1;
+	serial_in[11] = #100000 1'b0;
+	serial_in[11] = #100000 1'b1;
+	serial_in[11] = #100000 1'b0;
+	serial_in[11] = #100000 1'b1;
+	serial_in[11] = #200000 1'b0;
+end 
+// serial_in[ 10 ]
+initial
+begin
+	serial_in[10] = 1'b0;
+	serial_in[10] = #200000 1'b1;
+	serial_in[10] = #100000 1'b0;
+	serial_in[10] = #100000 1'b1;
+	serial_in[10] = #300000 1'b0;
+	serial_in[10] = #100000 1'b1;
+	serial_in[10] = #100000 1'b0;
+end 
+// serial_in[ 9 ]
+initial
+begin
+	serial_in[9] = 1'b0;
+	serial_in[9] = #600000 1'b1;
+end 
+// serial_in[ 8 ]
+initial
+begin
+	serial_in[8] = 1'b1;
+	serial_in[8] = #100000 1'b0;
+	serial_in[8] = #200000 1'b1;
+	serial_in[8] = #200000 1'b0;
+	serial_in[8] = #200000 1'b1;
+	serial_in[8] = #200000 1'b0;
+end 
+// serial_in[ 7 ]
+initial
+begin
+	serial_in[7] = 1'b1;
+	serial_in[7] = #200000 1'b0;
+	serial_in[7] = #300000 1'b1;
+	serial_in[7] = #200000 1'b0;
+	serial_in[7] = #200000 1'b1;
+end 
+// serial_in[ 6 ]
+initial
+begin
+	serial_in[6] = 1'b0;
+	serial_in[6] = #700000 1'b1;
+	serial_in[6] = #200000 1'b0;
+end 
+// serial_in[ 5 ]
+initial
+begin
+	serial_in[5] = 1'b0;
+	serial_in[5] = #100000 1'b1;
+	serial_in[5] = #600000 1'b0;
+end 
+// serial_in[ 4 ]
+initial
+begin
+	serial_in[4] = 1'b0;
+	serial_in[4] = #500000 1'b1;
+	serial_in[4] = #100000 1'b0;
+	serial_in[4] = #100000 1'b1;
+	serial_in[4] = #100000 1'b0;
+end 
+// serial_in[ 3 ]
+initial
+begin
+	serial_in[3] = 1'b0;
+	serial_in[3] = #100000 1'b1;
+	serial_in[3] = #100000 1'b0;
+	serial_in[3] = #200000 1'b1;
+	serial_in[3] = #100000 1'b0;
+	serial_in[3] = #100000 1'b1;
+	serial_in[3] = #300000 1'b0;
+end 
+// serial_in[ 2 ]
+initial
+begin
+	serial_in[2] = 1'b1;
+	serial_in[2] = #300000 1'b0;
+	serial_in[2] = #200000 1'b1;
+	serial_in[2] = #100000 1'b0;
+	serial_in[2] = #100000 1'b1;
+	serial_in[2] = #100000 1'b0;
+	serial_in[2] = #100000 1'b1;
+end 
+// serial_in[ 1 ]
+initial
+begin
+	serial_in[1] = 1'b0;
+	serial_in[1] = #100000 1'b1;
+	serial_in[1] = #100000 1'b0;
+	serial_in[1] = #100000 1'b1;
+	serial_in[1] = #600000 1'b0;
+end 
+// serial_in[ 0 ]
+initial
+begin
+	serial_in[0] = 1'b1;
+	serial_in[0] = #200000 1'b0;
+	serial_in[0] = #700000 1'b1;
+end 
+
+Mean_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.freq(freq),
+	.serial_in(serial_in),
+	.sampler_tx(sampler)
+);
+
+Mean_vlg_check_tst tb_out(
+	.average(average),
+	.sampler_rx(sampler)
+);
+endmodule
+

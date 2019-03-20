@@ -1,0 +1,51 @@
+# do square.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module square
+# 
+# Top level modules:
+# 	square
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module square_vlg_sample_tst
+# -- Compiling module square_vlg_check_tst
+# -- Compiling module square_vlg_vec_tst
+# 
+# Top level modules:
+# 	square_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.square_vlg_vec_tst 
+# Loading work.square_vlg_vec_tst
+# Loading work.square
+# Loading altera_ver.dffeas
+# Loading work.square_vlg_sample_tst
+# Loading work.square_vlg_check_tst
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (1 or 1) does not match connection size (26) for port 'az'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (16 or 16) does not match connection size (18) for port 'bx'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (16 or 16) does not match connection size (19) for port 'by'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (1 or 1) does not match connection size (18) for port 'bz'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (12 or 12) does not match connection size (27) for port 'scanin'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-3015) square.vo(885): [PCDPC] - Port size (64 or 64) does not match connection size (1) for port 'chainin'. The port definition is at: nofile(37).
+# 
+#         Region: /square_vlg_vec_tst/i1/\Mult0~8 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# ** Warning: (vsim-8607) nofile(37): Non-positive replication multiplier inside concat. Replication will be ignored.
+# 
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : Waveform1.vwf.vt(707)
+#    Time: 1 us  Iteration: 0  Instance: /square_vlg_vec_tst/tb_out

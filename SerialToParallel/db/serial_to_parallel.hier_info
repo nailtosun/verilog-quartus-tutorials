@@ -1,0 +1,40 @@
+|serial_to_parallel
+clk => parallel_out[0]~reg0.CLK
+clk => parallel_out[1]~reg0.CLK
+clk => parallel_out[2]~reg0.CLK
+clk => parallel_out[3]~reg0.CLK
+clk => parallel_out[4]~reg0.CLK
+clk => parallel_out[5]~reg0.CLK
+clk => parallel_out[6]~reg0.CLK
+clk => parallel_out[7]~reg0.CLK
+clk => parallel_out[8]~reg0.CLK
+clk => parallel_out[9]~reg0.CLK
+clk => parallel_out[10]~reg0.CLK
+clk => parallel_out[11]~reg0.CLK
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+reset => parallel_out.OUTPUTSELECT
+serial_in => parallel_out.DATAA
+parallel_out[0] <= parallel_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[1] <= parallel_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[2] <= parallel_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[3] <= parallel_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[4] <= parallel_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[5] <= parallel_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[6] <= parallel_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[7] <= parallel_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[8] <= parallel_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[9] <= parallel_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[10] <= parallel_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+parallel_out[11] <= parallel_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

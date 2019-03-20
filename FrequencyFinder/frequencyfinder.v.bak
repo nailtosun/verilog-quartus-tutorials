@@ -1,0 +1,27 @@
+module frequency_finder(clk,pushbuttoni,pushbuttond)
+input clk;
+input [11:0] serial_in; //12 bit parallel data come in series
+input [11:0] trigger; 
+input push_pushbuttoni,pushbuttond;
+output reg [31:0] frequency;
+integer counter = 0;
+always @(posedge clk)
+begin
+		if (serial_in == trigger)
+		begin
+			counter <= counter;
+			if (serial_in == trigger)
+			begin
+				if (serial_in == trigger)
+					begin
+					frequency <= counter;
+					counter <= 0;
+					end
+			end
+			else
+			begin 
+				counter <= counter + 1;
+			end
+		end
+end
+endmodule

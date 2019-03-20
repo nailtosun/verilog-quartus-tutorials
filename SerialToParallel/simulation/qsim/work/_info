@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\nailt\Desktop\SerialToParallel\simulation\qsim
+vserial_to_parallel
+Z1 !s100 L?HAgHF2_ZkcT`am6l]AX2
+Z2 InJn>K[SUzd9LZ:@E@;0;`0
+Z3 V`h9M=R3Nc7>mf06G`O>1M2
+Z4 dC:\Users\nailt\Desktop\SerialToParallel\simulation\qsim
+Z5 w1524914919
+Z6 8serial_to_parallel.vo
+Z7 Fserial_to_parallel.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|serial_to_parallel.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1524914921.120000
+Z12 !s107 serial_to_parallel.vo|
+!s101 -O0
+vserial_to_parallel_vlg_check_tst
+!i10b 1
+!s100 AK3=7WHfZjRz8QfeTg3bO2
+IG6Z[dLV_J[f;zjU<k`ihz0
+Z13 VhZcWhSeOi:3zBcI8`neb`1
+R4
+Z14 w1524914918
+Z15 8Waveform.vwf.vt
+Z16 FWaveform.vwf.vt
+L0 61
+R8
+r1
+!s85 0
+31
+Z17 !s108 1524914921.245000
+Z18 !s107 Waveform.vwf.vt|
+Z19 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vserial_to_parallel_vlg_sample_tst
+!i10b 1
+Z20 !s100 kJ_=B=O`EEm9P`lT93Lgi3
+Z21 IST^6O=DRWidDK6SHT7IT>0
+Z22 V1QEz^F[X:OYG<2?kmXfO:1
+R4
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10
+vserial_to_parallel_vlg_vec_tst
+!i10b 1
+!s100 Xl;jS;@OoVlkYDaVi[Lc?0
+Io5VEaH:hNbW>73KTgicH:1
+Z23 VC_JW4EkhIemV3B<=5:JXS1
+R4
+R14
+R15
+R16
+Z24 L0 353
+R8
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R10

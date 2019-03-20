@@ -1,0 +1,25 @@
+# do serial_to_parallel.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module serial_to_parallel
+# 
+# Top level modules:
+# 	serial_to_parallel
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module serial_to_parallel_vlg_sample_tst
+# -- Compiling module serial_to_parallel_vlg_check_tst
+# -- Compiling module serial_to_parallel_vlg_vec_tst
+# 
+# Top level modules:
+# 	serial_to_parallel_vlg_vec_tst
+# vsim -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.serial_to_parallel_vlg_vec_tst 
+# Loading work.serial_to_parallel_vlg_vec_tst
+# Loading work.serial_to_parallel
+# Loading altera_ver.dffeas
+# Loading work.serial_to_parallel_vlg_sample_tst
+# Loading work.serial_to_parallel_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(349)
+#    Time: 120 ns  Iteration: 0  Instance: /serial_to_parallel_vlg_vec_tst/tb_out

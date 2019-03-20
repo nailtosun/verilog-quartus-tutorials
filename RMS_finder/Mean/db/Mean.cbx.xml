@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Mean">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Mean|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3dm.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

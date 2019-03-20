@@ -1,0 +1,34 @@
+module mean(clk, freq, average, serial_in);
+input clk;
+input [11:0] serial_in;
+input [31:0] freq;
+output reg [31:0] average;
+integer index,N,dum_index,sum; 
+initial
+begin
+period = 0;
+sum <= 0;
+N <= 0;
+index <= 0;
+average <= 0;
+dum_index <= 1;
+end
+always @(posedge clk)
+begin
+	//N=f_sampling/freq //input and sampling frequency determines the N
+	N = 8; //for testing
+	if (index<N)
+		begin
+		sum <= sum + serial_in;
+		index <= index+1;
+		end
+	else if(index==N)
+	begin
+	dum_index <= dum_index + 1;
+	average <= sum/(N*dum_index);
+	index <= index +1;
+	dum_index <= dum_index + 1;
+	end
+	else index <= 0;
+end
+endmodule
